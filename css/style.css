@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+#grid_wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 80px 350px 350px minmax(100px,1fr);
+    grid-template-areas: 
+    "hea hea hea"
+    "nav nav nav"
+    "mai mai mai"
+    "se1 se1 se1"
+    "foo foo foo"
+
+}
+
+header{
+    background-color: orange;
+    grid-area: hea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+nav{
+    background-color: black;
+    grid-area: nav;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+#main{
+    
+    grid-area: mai;
+
+}
+
+#section_1{
+
+ grid-area: se1;
+
+
+}
+
+footer{
+
+
+
+}
+
+h1{
+text-size-adjust: large;
+
+
+}
+
