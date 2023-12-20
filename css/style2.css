@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grid_wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 100px 1000px minmax(100px, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "hea"
+        "nav"
+        "mai"
+        "foo";
+}
+
+header {
+    grid-area: hea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+nav {
+    background-color: black;
+    grid-area: nav;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#main {
+    grid-area: mai;
+    background-color: #e74c3c;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    text-align: center;
+    margin: 80px auto;
+    margin-top: 80px;
+    font-size: 35px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 90px;
+
+}
+
+#section_1 {
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    grid-area: se1;
+    text-align: center;
+    color: aliceblue;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-size-adjust: small;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: 50px;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+p {
+    margin: 40px;
+}
+
+nav p {
+    color: rgb(134, 55, 55);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav p:hover {
+    text-decoration: underline;
+}
+
+/* Add a new style for the image container */
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+}
+
+img {
+    width: 350px; /* Ensure images take up the full width of their container */
+    height: auto; /* Ensure images take up the full height of their container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    display: block; /* Remove extra space below inline images */
+    margin: auto; /* Center the images within the container */
+}
